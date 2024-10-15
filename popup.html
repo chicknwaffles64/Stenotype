@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+        width: 23em;
+    }
+    .row   {
+        margin: 0.5em;
+    }
+    button {
+        font-size: 1em;
+        font-family: "Monaco","Lucida Console", "Courier New", monospace;
+        padding: 0.2em;
+    }
+    #alert {
+        color: rgb(181, 76, 0);
+        font-size: 1em;
+        font-family: "Monaco","Lucida Console", "Courier New", monospace;
+        margin-top: 5px;
+    }
+    #runScript, #stopScript {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        border: 2px solid rgb(45, 45, 45);
+        border-radius: 5px;
+    }
+    .disabled{
+        pointer-events: none;
+        opacity: 0.4;
+    }
+    .blink{
+        animation: blinker 2s linear infinite;
+        color: rgb(17, 103, 36);
+    }
+    @keyframes blinker {
+        50% { opacity: 0.40; }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="row" style="display: flex; flex-direction: row; justify-content: center; gap: 2em;">
+        <button id="runScript">START</button>
+        <button id="stopScript" class="disabled">STOP</button>
+    </div>
+    <div class="row" style="display: flex; flex-direction: row; justify-content: center; gap: 2em;">
+        <span id="progress"><i>Click with captions visible to start transcribing</i></span>
+    </div>
+    <div class="row" style="display: flex; flex-direction: column;">
+        <button id="hideCaptions">hide/show captions</button>
+        <button id="copy" class="disabled">📋 copy to clipboard</button>
+        <div id="alert"></div>
+    </div>
+
+</body>
+<script src="popup.js"></script>
+</html>
