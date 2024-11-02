@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Stenotype",
-    "version": "1.0",
+    "version": "1.1",
   
     "description": "When run by the user, passively generates a plain text transcription of YouTube captions while you watch the video, which can later be copied to the clipboard.",
   
